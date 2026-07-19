@@ -1,46 +1,153 @@
-# Astro Starter Kit: Basics
+# Ernadima Digital Studio
 
-```sh
-npm create astro@latest -- --template basics
+Official website of **Ernadima Digital Studio**, built with Astro and Tailwind CSS.
+
+> Currently under active development.
+
+---
+
+## About
+
+Ernadima Digital Studio is a digital creative studio specializing in modern web experiences, visual design, and digital solutions for businesses, organizations, and personal brands.
+
+This repository contains the source code for the official website.
+
+---
+
+## Tech Stack
+
+- Astro
+- Tailwind CSS v4
+- TypeScript
+- ESLint
+- Prettier
+- Cloudflare Pages
+
+---
+
+## Project Status
+
+### ✅ Completed
+
+- Project setup
+- Astro configuration
+- Tailwind CSS integration
+- ESLint & Prettier configuration
+- GitHub repository
+- Cloudflare Pages deployment
+- Custom domain configuration
+- Global layout
+- Responsive "Under Development" landing page
+- Basic SEO
+
+### 🚧 In Progress
+
+- Landing page
+- Portfolio showcase
+- Services page
+- About page
+- Contact page
+- Blog
+- SEO optimization
+- Performance optimization
+
+---
+
+## Roadmap
+
+- Modern landing page
+- Portfolio gallery
+- Service details
+- Contact form
+- Blog with Astro Content Collections
+- Case studies
+- Dark mode
+- Internationalization (i18n)
+
+---
+
+## Development
+
+Clone the repository:
+
+```bash
+git clone https://github.com/ernadima/web.git
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Install dependencies:
 
-## 🚀 Project Structure
+```bash
+npm install
+```
 
-Inside of your Astro project, you'll see the following folders and files:
+Run development server:
 
-```text
-/
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+Preview production build:
+
+```bash
+npm run preview
+```
+
+---
+
+## Project Structure
+
+```
+.
 ├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── layouts/
+│   ├── pages/
+│   └── styles/
+|
+├── .gitignore
+├── LICENSE
+├── README.md
+├── astro.config.mjs
+├── package.json
+└── tsconfig.json
+
+---
+
+## Deployment
+
+The project is automatically deployed via **Cloudflare Pages** whenever changes are merged into the `main` branch.
+
+---
+
+## Contributing
+
+This repository is currently maintained by Ernadima Digital Studio.
+
+Contributions, suggestions, and issue reports are welcome.
+
+---
+
+## License
+
+This project is licensed under the **GNU General Public License v3.0 (GNU GPLv3)**.
+
+See the [LICENSE](LICENSE) file for details.
+
+---
+
+## Website
+
+🌐 https://ernadima.pages.dev
+
+---
+
+Made with ❤️ by Ernadima Digital Studio.
 ```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
