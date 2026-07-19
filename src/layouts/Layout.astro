@@ -17,13 +17,11 @@ const { title, description, canonical } = Astro.props;
 		<meta property="og:description" content={description}>
 		<meta property="og:type" content="website">
 		<meta property="og:url" content={canonical}>
-		<!-- <meta property="og:image" content="/og-image.png"> -->
+		<meta property="og:image" content="/public/og-image.webp">
 		<title>{title}</title>
 	</head>
 	<body>
-		<nav></nav>
 		<slot />
-		<footer></footer>
 	</body>
 </html>
 
