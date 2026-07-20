@@ -30,3 +30,21 @@
   --color-ed-neutral-900: #2c3341;
   --color-ed-neutral-950: #1c2430;
 }
+
+@layer components {
+  .ed-heading {
+    @apply text-3xl md:text-5xl lg:text-6xl font-bold;
+  }
+
+  .ed-subheading {
+    @apply text-2xl md:text-3xl lg:text-4xl font-semibold;
+  }
+
+  .ed-body {
+    @apply text-sm md:text-base leading-relaxed;
+  }
+
+  .ed-caption {
+    @apply text-xs md:text-sm text-neutral-600;
+  }
+}
