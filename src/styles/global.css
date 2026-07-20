@@ -4,3 +4,66 @@
 @import "flowbite/src/themes/default";
 @plugin "flowbite/plugin";
 @source "../../node_modules/flowbite";
+
+@theme {
+    /* Primary brand */
+    --color-brand-blue-50: #f1f7fe;
+    --color-brand-blue-100: #e2edfc;
+    --color-brand-blue-200: #bedbf9;
+    --color-brand-blue-300: #85bef4;
+    --color-brand-blue-400: #449cec;
+    --color-brand-blue-500: #1c80db;
+    --color-brand-blue-600: #0d5bab;
+    --color-brand-blue-700: #0d4f97;
+    --color-brand-blue-800: #0f447d;
+    --color-brand-blue-900: #123a68;
+    --color-brand-blue-950: #0c2545; 
+
+    --color-brand-cyan-50: #f0f9ff;
+    --color-brand-cyan-100: #def1fd;
+    --color-brand-cyan-200: #bce6fb;
+    --color-brand-cyan-300: #81d3f8;
+    --color-brand-cyan-400: #3dbdf3;
+    --color-brand-cyan-500: #14a5e3;
+    --color-brand-cyan-600: #0785c2;
+    --color-brand-cyan-700: #076a9d;
+    --color-brand-cyan-800: #0a5a82;
+    --color-brand-cyan-900: #0f4a6b;
+    --color-brand-cyan-950: #0a2f47;
+
+    --color-brand-violet-50: #eef4ff;
+    --color-brand-violet-100: #e0ebff;
+    --color-brand-violet-200: #c7dafe;
+    --color-brand-violet-300: #b4cbfd;
+    --color-brand-violet-400: #809cf9;
+    --color-brand-violet-500: #627af2;
+    --color-brand-violet-600: #627af2;
+    --color-brand-violet-700: #3741cb;
+    --color-brand-violet-800: #2f39a4;
+    --color-brand-violet-900: #2d3682;
+    --color-brand-violet-950: #1b1f4b;
+
+    --color-brand-grey-50: #f4f6fb;
+    --color-brand-grey-100: #e9edf5;
+    --color-brand-grey-200: #cdd9ea;
+    --color-brand-grey-300: #a1b8d8;
+    --color-brand-grey-400: #6f93c1;
+    --color-brand-grey-500: #4c76ab;
+    --color-brand-grey-600: #3a5d8f;
+    --color-brand-grey-700: #304b74;
+    --color-brand-grey-800: #2b4161;
+    --color-brand-grey-900: #283852;
+    --color-brand-grey-950: #131a27; 
+
+    --color-brand-black-50: #fafafa;
+    --color-brand-black-100: #f4f4f5;
+    --color-brand-black-200: #e5e4e7;
+    --color-brand-black-300: #d6d3d9;
+    --color-brand-black-400: #a5a0ab;
+    --color-brand-black-500: #6e6974;
+    --color-brand-black-600: #56515c;
+    --color-brand-black-700: #423e47;
+    --color-brand-black-800: #28272a;
+    --color-brand-black-900: #19181b;
+    --color-brand-black-950: #0a090b;
+}
