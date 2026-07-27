@@ -14,8 +14,8 @@ import Footer from "../components/Footer.astro";
 >
   <Navbar />
 
-  <!-- Hero Section -->
-  <section class="bg-gray-50 min-h-[85vh] mt-16">
+  <!-- Start Hero Section -->
+  <section class="bg-gray-50 mt-16">
     <div
       class="mx-auto
       max-w-7xl
@@ -26,74 +26,190 @@ import Footer from "../components/Footer.astro";
       items-center
       gap-12
       px-4
-      py-12"
+      py-16
+      sm:py-0"
     >
-      <div class="order-2 lg:order-1 mr-auto lg:col-span-7">
+      <!-- Content -->
+      <div class="order-2 lg:order-1 lg:col-span-7">
+        <!-- Badge -->
         <a
-          href="#"
-          class="inline-flex justify-between items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-gray-100 rounded-full hover:bg-gray-200"
-          role="alert"
+          href="/service"
+          class="inline-flex items-center py-1 px-1 pr-4 mb-7 text-sm text-gray-700 bg-white border border-gray-200 rounded-full hover:bg-gray-100 transition"
         >
           <span
-            class="text-xs bg-ed-primary-600 rounded-full text-white px-4 py-1.5 mr-3"
-            >New</span
+            class="rounded-full bg-ed-primary-600 px-4 py-1.5 text-xs font-medium text-white"
           >
-          <span class="text-sm font-medium"
-            >Flowbite is out! See what's new</span
-          >
-          <svg
-            class="ml-2 w-5 h-5"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-            ><path
+            Available
+          </span>
+
+          <span class="ml-3 text-sm font-medium">
+            Explore our digital services
+          </span>
+
+          <svg class="ml-2 h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+            <path
               fill-rule="evenodd"
               d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-              clip-rule="evenodd"></path></svg
-          >
+              clip-rule="evenodd"></path>
+          </svg>
         </a>
+
+        <!-- Heading -->
         <h1
-          class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl"
+          class="max-w-3xl text-4xl font-extrabold leading-tight tracking-tight md:text-5xl xl:text-6xl"
         >
-          Payments tool for software companies
+          Digital Solutions
+          <span class="text-ed-primary-600"> for Your Business </span>
         </h1>
-        <p
-          class="max-w-2xl mb-6 font-light text-gray-600 lg:mb-8 md:text-lg lg:text-x"
-        >
-          From checkout to global sales tax compliance, companies around the
-          world use Flowbite to simplify their payment stack.
+
+        <!-- Description -->
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-gray-600">
+          We help businesses, organizations, and individuals build a stronger
+          digital presence through branding, graphic design, websites, and
+          digital solutions that are both beautiful and purposeful.
         </p>
-        <a
-          href="#"
-          class="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-ed-primary-600 hover:bg-ed-primary -800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
-        >
-          Get started
-          <svg
-            class="w-5 h-5 ml-2 -mr-1"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-            xmlns="http://www.w3.org/2000/svg"
-            ><path
-              fill-rule="evenodd"
-              d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-              clip-rule="evenodd"></path></svg
+
+        <!-- CTA -->
+        <div class="mt-10 flex flex-wrap gap-4">
+          <a
+            href="/services"
+            class="inline-flex items-center justify-center rounded-lg bg-ed-primary-600 px-6 py-3 text-base font-medium text-white transition hover:bg-ed-primary-700"
           >
-        </a>
-        <a
-          href="#"
-          class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-ed-primary-500 rounded-lg hover:bg-ed-neutral-100 focus:ring-4 focus:ring-gray-100"
-        >
-          Speak to Sales
-        </a>
+            View Our Services
+
+            <svg class="ml-2 h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                fill-rule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </a>
+
+          <a
+            href="/contact"
+            class="inline-flex items-center justify-center rounded-lg border border-ed-primary-600 px-6 py-3 text-base font-medium text-ed-primary-600 transition hover:bg-ed-primary-50"
+          >
+            Free Consultation
+          </a>
+        </div>
       </div>
-      <div class="order-1 lg:order-2 lg:col-span-5 flex justify-center">
-        <img
-          src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/hero/phone-mockup.png"
-          alt="mockup"
-        />
+
+      <!-- Illustration Skeleton -->
+      <div class="order-1 flex justify-center lg:order-2 lg:col-span-5">
+        <div
+          role="status"
+          class="w-full max-w-md animate-pulse rounded-3xl border border-gray-200 bg-white p-6 shadow-lg"
+        >
+          <div class="mb-6 h-6 w-40 rounded bg-gray-200"></div>
+
+          <div class="space-y-3">
+            <div class="h-4 rounded bg-gray-200"></div>
+            <div class="h-4 w-5/6 rounded bg-gray-200"></div>
+            <div class="h-4 w-3/4 rounded bg-gray-200"></div>
+          </div>
+
+          <div class="my-8 h-56 rounded-2xl bg-gray-200"></div>
+
+          <div class="flex gap-3">
+            <div class="h-10 flex-1 rounded-lg bg-gray-200"></div>
+            <div class="h-10 w-20 rounded-lg bg-gray-200"></div>
+          </div>
+
+          <span class="sr-only">Loading...</span>
+        </div>
       </div>
     </div>
   </section>
+  <!-- End of Hero Section -->
+
+  <!-- Start of Customer Logo -->
+  <section class="bg-ed-primary-50">
+    <div class="max-w-7xl mx-auto px-4 py-20">
+      <!-- Heading -->
+      <div class="text-center max-w-3xl mx-auto">
+        <span class="text-gray-700 font-medium"> Trusted by Clients </span>
+
+        <h2 class="mt-3 text-3xl lg:text-4xl font-bold">
+          Trusted by <span class="text-ed-primary-600"
+            >Businesses and Organizations</span
+          >
+        </h2>
+
+        <p class="mt-4 text-gray-600">
+          We help businesses, educational institutions, organizations, and
+          individuals create impactful designs and digital solutions that
+          strengthen their brand and online presence.
+        </p>
+      </div>
+
+      <!-- Stats -->
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 mt-16 text-center">
+        <div>
+          <h3 class="text-4xl font-bold text-ed-primary-600">500+</h3>
+          <p class="mt-2 text-gray-600">Completed Projects</p>
+        </div>
+
+        <div>
+          <h3 class="text-4xl font-bold text-ed-primary-600">100+</h3>
+          <p class="mt-2 text-gray-600">Happy Clients</p>
+        </div>
+
+        <div>
+          <h3 class="text-4xl font-bold text-ed-primary-600">5+</h3>
+          <p class="mt-2 text-gray-600">Years of Experience</p>
+        </div>
+
+        <div>
+          <h3 class="text-4xl font-bold text-ed-primary-600">98%</h3>
+          <p class="mt-2 text-gray-600">Client Satisfaction</p>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="w-full h-px bg-gray-200 my-16"></div>
+
+      <!-- Client Logos -->
+      <div class="flex flex-wrap justify-center gap-10 items-center opacity-60">
+        <!-- logo -->
+        <div
+          role="status"
+          class="flex items-center justify-center h-16 rounded-lg bg-gray-200 animate-pulse dark:bg-gray-700"
+        >
+          <div class="w-48 h-24 rounded bg-gray-300 dark:bg-gray-600"></div>
+          <span class="sr-only">Loading...</span>
+        </div>
+        <div
+          role="status"
+          class="flex items-center justify-center h-16 rounded-lg bg-gray-200 animate-pulse dark:bg-gray-700"
+        >
+          <div class="w-48 h-24 rounded bg-gray-300 dark:bg-gray-600"></div>
+          <span class="sr-only">Loading...</span>
+        </div>
+        <div
+          role="status"
+          class="flex items-center justify-center h-16 rounded-lg bg-gray-200 animate-pulse dark:bg-gray-700"
+        >
+          <div class="w-48 h-24 rounded bg-gray-300 dark:bg-gray-600"></div>
+          <span class="sr-only">Loading...</span>
+        </div>
+        <div
+          role="status"
+          class="flex items-center justify-center h-16 rounded-lg bg-gray-200 animate-pulse dark:bg-gray-700"
+        >
+          <div class="w-48 h-24 rounded bg-gray-300 dark:bg-gray-600"></div>
+          <span class="sr-only">Loading...</span>
+        </div>
+        <div
+          role="status"
+          class="flex items-center justify-center h-16 rounded-lg bg-gray-200 animate-pulse dark:bg-gray-700"
+        >
+          <div class="w-48 h-24 rounded bg-gray-300 dark:bg-gray-600"></div>
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of Customer Logo -->
 
   <Footer />
 </Layout>
