@@ -1,5 +1,6 @@
 ---
 import Button from "../components/Button.astro";
+import LinkArrow from "../components/LinkArrow.astro";
 import Layout from "../layouts/Layout.astro";
 import Container from "../components/Container.astro";
 import Navbar from "../components/Navbar.astro";
@@ -192,6 +193,93 @@ import Footer from "../components/Footer.astro";
     </Container>
   </section>
   <!-- End of Customer Logo -->
+
+  <!-- Start of Services -->
+  <section class="bg-gray-50">
+    <Container class="py-20">
+      <div class="mx-auto max-w-3xl text-center">
+        <span class="text-gray-700 font-medium"> What We Do </span>
+
+        <h2 class="mt-3 text-3xl lg:text-4xl font-bold">
+          Take the work <span class="text-ed-primary-600">off your plate.</span>
+        </h2>
+        <p class="mt-4 text-gray-600">
+          We handle the tasks that take your time away from what matters most.
+        </p>
+      </div>
+
+      <!-- Services -->
+      <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <!-- Administrative Support -->
+        <article
+          class="flex h-full flex-col rounded-2xl bg-ed-primary-600 p-8 text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-ed-primary-700 hover:shadow-xl"
+        >
+          <div class="text-sm font-semibold text-white/60">01</div>
+          <div class="mt-10">
+            <h3 class="text-2xl font-bold tracking-tight">
+              Administrative Support
+            </h3>
+            <p class="mt-4 leading-7 text-white/80">
+              Take repetitive administrative tasks off your plate so you can
+              focus on running your business.
+            </p>
+          </div>
+          <div class="mt-auto pt-8">
+            <LinkArrow href="/service" variant="primary">
+              Learn More
+            </LinkArrow>
+          </div>
+        </article>
+        <!-- Lead Generation -->
+        <article
+          class="flex h-full flex-col rounded-2xl border border-ed-primary-200 bg-white p-8 text-gray-900 transition-all duration-300 hover:-translate-y-1 hover:border-ed-primary-400 hover:bg-ed-primary-50 hover:shadow-xl"
+        >
+          <div class="text-sm font-semibold text-ed-primary-600">02</div>
+          <div class="mt-10">
+            <h3 class="text-2xl font-bold tracking-tight">Lead Generation</h3>
+            <p class="mt-4 leading-7 text-gray-600">
+              Find, research, and organize potential leads so you can spend more
+              time turning prospects into clients.
+            </p>
+          </div>
+          <div class="mt-auto pt-8">
+            <LinkArrow href="/service"> Learn More </LinkArrow>
+          </div>
+        </article>
+        <!-- Social Media Management -->
+        <article
+          class="flex h-full flex-col rounded-2xl border border-ed-primary-200 bg-white p-8 text-gray-900 transition-all duration-300 hover:-translate-y-1 hover:border-ed-primary-400 hover:bg-ed-primary-50 hover:shadow-xl"
+        >
+          <div class="text-sm font-semibold text-ed-primary-600">03</div>
+          <div class="mt-10">
+            <h3 class="text-2xl font-bold tracking-tight">
+              Social Media Management
+            </h3>
+            <p class="mt-4 leading-7 text-gray-600">
+              Keep your social presence consistent with content scheduling,
+              publishing, and day-to-day management.
+            </p>
+          </div>
+          <div class="mt-auto pt-8">
+            <LinkArrow href="/service"> Learn More </LinkArrow>
+          </div>
+        </article>
+      </div>
+
+      <!-- Supporting Services -->
+      <div class="mt-14 text-center">
+        <p class="mt-4 text-gray-600">
+          If you need something else, we also offer <a
+            href="/service"
+            class="font-semibold text-ed-primary-600 transition hover:text-ed-primary-700"
+          >
+            supporting digital services.
+          </a>
+        </p>
+      </div>
+    </Container>
+  </section>
+  <!-- End of Services -->
 
   <Footer />
 </Layout>
