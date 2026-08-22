@@ -40,7 +40,7 @@ const { image, category, title, description, href } = Astro.props;
       class="absolute inset-x-0 bottom-0 z-10 hidden bg-linear-to-t from-ed-primary-950/95 via-ed-primary-950/50 to-transparent px-6 pb-6 pt-24 transition-opacity duration-500 lg:block lg:group-hover:opacity-0"
     >
       <span
-        class="text-xs font-semibold uppercase tracking-widest text-ed-primary-300"
+        class="ed-caption font-semibold uppercase tracking-widest text-ed-primary-300"
       >
         {category}
       </span>
@@ -57,7 +57,7 @@ const { image, category, title, description, href } = Astro.props;
       class="absolute inset-0 z-18 hidden flex-col justify-end rounded-2xl bg-ed-primary-950 px-6 py-6 text-white transition-transform duration-500 ease-out lg:flex lg:translate-y-full lg:group-hover:translate-y-0"
     >
       <span
-        class="text-xs font-semibold uppercase tracking-widest text-ed-primary-300"
+        class="ed-caption font-semibold uppercase tracking-widest text-ed-primary-300"
       >
         {category}
       </span>
@@ -66,7 +66,7 @@ const { image, category, title, description, href } = Astro.props;
         {title}
       </h3>
 
-      <p class="mt-3 line-clamp-2 text-sm leading-relaxed text-white/70">
+      <p class="ed-body mt-3 line-clamp-2 text-white/70">
         {description}
       </p>
 
@@ -79,7 +79,7 @@ const { image, category, title, description, href } = Astro.props;
   <!-- Mobile Information -->
   <div class="mt-3 rounded-2xl bg-ed-primary-100 px-5 py-5 lg:hidden">
     <span
-      class="text-xs font-semibold uppercase tracking-widest text-ed-primary-600"
+      class="ed-caption font-semibold uppercase tracking-widest text-ed-primary-600"
     >
       {category}
     </span>
@@ -88,7 +88,7 @@ const { image, category, title, description, href } = Astro.props;
       {title}
     </h3>
 
-    <p class="mt-3 text-sm leading-relaxed text-ed-neutral-900">
+    <p class="ed-body mt-3 text-ed-neutral-900">
       {description}
     </p>
 
