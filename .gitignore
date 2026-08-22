@@ -26,4 +26,4 @@ pnpm-debug.log*
 # Instruction
 Ernadima_Phase_Checklist_*.md
 generate-components.py
-components.md
+components_*.md
