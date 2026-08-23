@@ -1,3 +1,11 @@
-<article>
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className = "" } = Astro.props;
+---
+
+<article class={className}>
   <slot />
 </article>
