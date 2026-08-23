@@ -15,12 +15,11 @@ import Footer from "../components/Footer.astro";
 >
   <Navbar />
 
-  <!-- Hero -->
+  <!-- Start of Hero Section -->
   <section class="mt-16 bg-gray-50">
     <Container
       class="grid min-h-[calc(100vh-5rem)] grid-cols-1 items-center gap-12 py-16 sm:py-0 lg:grid-cols-12"
     >
-      <!-- Content -->
       <div class="order-2 lg:order-1 lg:col-span-7">
         <!-- Badge -->
         <a
@@ -86,8 +85,7 @@ import Footer from "../components/Footer.astro";
         </div>
       </div>
 
-      <!-- Illustration Skeleton -->
-      <div class="order-1 flex justify-center lg:order-2 lg:col-span-5">
+      <div class="order-1 lex justify-center lg:order-2 lg:col-span-5">
         <div
           role="status"
           class="w-full max-w-md animate-pulse rounded-3xl border border-gray-200 bg-white p-6 shadow-lg"
@@ -112,8 +110,9 @@ import Footer from "../components/Footer.astro";
       </div>
     </Container>
   </section>
+  <!-- End of Hero Section -->
 
-  <!-- Customer Logo & Statistics -->
+  <!-- Start of Social Proof -->
   <section class="bg-ed-primary-50">
     <Container class="py-20">
       <div class="mx-auto max-w-3xl text-center">
@@ -176,8 +175,9 @@ import Footer from "../components/Footer.astro";
       </div>
     </Container>
   </section>
+  <!-- ENd of Social Proof -->
 
-  <!-- Services -->
+  <!-- Start of Services Section -->
   <section class="bg-gray-50">
     <Container class="py-20">
       <div class="mx-auto max-w-3xl text-center">
@@ -193,33 +193,30 @@ import Footer from "../components/Footer.astro";
         </p>
       </div>
 
-      <!-- Services -->
       <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
-        <!-- Administrative Support -->
+        <!-- Start of Administrative Support -->
         <article
           class="flex h-full flex-col rounded-2xl bg-ed-primary-600 p-8 text-white shadow-lg transition-all duration-300 hover:-translate-y-1 hover:bg-ed-primary-700 hover:shadow-xl"
         >
           <div class="text-sm font-semibold text-white/60">01</div>
-
           <div class="mt-10">
             <h3 class="text-2xl font-bold tracking-tight">
               Administrative Support
             </h3>
-
             <p class="mt-4 leading-7 text-white/80">
               Take repetitive administrative tasks off your plate so you can
               focus on running your business.
             </p>
           </div>
-
           <div class="mt-auto pt-8">
             <LinkArrow href="/service" variant="primary">
               Learn More
             </LinkArrow>
           </div>
         </article>
+        <!-- End of Administrative Support -->
 
-        <!-- Lead Generation -->
+        <!-- Start of Lead Generation -->
         <article
           class="flex h-full flex-col rounded-2xl border border-ed-primary-200 bg-white p-8 text-gray-900 transition-all duration-300 hover:-translate-y-1 hover:border-ed-primary-400 hover:bg-ed-primary-50 hover:shadow-xl"
         >
@@ -238,8 +235,9 @@ import Footer from "../components/Footer.astro";
             <LinkArrow href="/service">Learn More</LinkArrow>
           </div>
         </article>
+        <!-- End of Lead Generation -->
 
-        <!-- Social Media Management -->
+        <!-- Start of Social Media Management -->
         <article
           class="flex h-full flex-col rounded-2xl border border-ed-primary-200 bg-white p-8 text-gray-900 transition-all duration-300 hover:-translate-y-1 hover:border-ed-primary-400 hover:bg-ed-primary-50 hover:shadow-xl"
         >
@@ -260,6 +258,7 @@ import Footer from "../components/Footer.astro";
             <LinkArrow href="/service">Learn More</LinkArrow>
           </div>
         </article>
+        <!-- End of Social Media Management -->
       </div>
 
       <div class="mt-14 text-center">
@@ -275,8 +274,9 @@ import Footer from "../components/Footer.astro";
       </div>
     </Container>
   </section>
+  <!-- End of Service Section -->
 
-  <!-- Featured Portfolio -->
+  <!-- Start of Featured Portfolio -->
   <section class="bg-ed-primary-800">
     <Container class="py-20">
       <div class="mx-auto max-w-3xl text-center">
@@ -286,7 +286,7 @@ import Footer from "../components/Footer.astro";
 
         <h2 class="ed-subheading mt-3 text-white">
           Selected work that
-          <span class="text-ed-primary-300">speaks for itself.</span>
+          <span class="text-ed-primary-300"> speaks for itself.</span>
         </h2>
 
         <p class="ed-body mt-4 text-white/70">
@@ -299,6 +299,6 @@ import Footer from "../components/Footer.astro";
       <FeaturedPortfolio />
     </Container>
   </section>
+  <!-- End of Featured Portfolio -->
+  <Footer />
 </Layout>
-
-<Footer />
