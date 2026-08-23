@@ -122,8 +122,7 @@ import Footer from "../components/Footer.astro";
         </span>
 
         <h2 class="ed-subheading mt-3">
-          Trusted by
-          <span class="text-ed-primary-600">
+          Trusted by <span class="text-ed-primary-600">
             Businesses and Organizations
           </span>
         </h2>
@@ -186,7 +185,7 @@ import Footer from "../components/Footer.astro";
 
         <h2 class="ed-subheading mt-3">
           Take the work
-          <span class="text-ed-primary-600">off your plate.</span>
+          <span class="text-ed-primary-600"> off your plate.</span>
         </h2>
 
         <p class="ed-body mt-4 text-gray-600">
@@ -303,7 +302,205 @@ import Footer from "../components/Footer.astro";
   <!-- End of Featured Portfolio -->
 
   <!-- Start of About Section -->
+  <section class="bg-gray-50">
+    <Container class="py-20">
+      <!-- About Preview -->
+      <div
+        class="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16"
+      >
+        <!-- Image -->
+        <div
+          class="relative aspect-4/3 overflow-hidden rounded-3xl bg-ed-primary-100"
+        >
+          <!-- Image Skeleton -->
+          <div
+            class="absolute inset-0 animate-pulse bg-ed-primary-100 transition-opacity duration-500"
+            data-about-skeleton
+            aria-hidden="true"
+          >
+          </div>
 
+          <!-- About Image -->
+          <img
+            src="/images/about-preview.jpg"
+            alt="Ernadima Studio"
+            loading="lazy"
+            decoding="async"
+            class="relative z-0 h-full w-full object-cover opacity-0 transition-opacity duration-500"
+            data-about-image
+          />
+        </div>
+
+        <!-- Content -->
+        <div>
+          <span class="ed-caption font-medium text-gray-700">
+            About Ernadima Studio
+          </span>
+
+          <h2 class="ed-subheading mt-3">
+            Digital solutions designed to
+            <span class="text-ed-primary-600"> move your ideas </span>
+            forward.
+          </h2>
+
+          <p class="ed-body mt-4 text-gray-600">
+            Ernadima Studio helps businesses, organizations, and personal brands
+            turn their ideas into clear and effective digital experiences
+            through thoughtful design and practical digital solutions.
+          </p>
+
+          <div class="mt-8">
+            <LinkArrow href="/about"> Learn More About Us </LinkArrow>
+          </div>
+        </div>
+      </div>
+
+      <!-- Workflow -->
+      <div class="mt-24 lg:mt-32">
+        <!-- Workflow Heading -->
+        <div class="mx-auto max-w-2xl text-center">
+          <span class="ed-caption font-medium text-gray-700">
+            Our Workflow
+          </span>
+
+          <h2 class="ed-subheading mt-3">
+            From
+            <span class="text-ed-primary-600"> your idea</span>
+            , to
+            <span class="text-ed-primary-600"> our deliver.</span>
+          </h2>
+
+          <p class="ed-body mt-4 text-gray-600">
+            We keep the process clear and straightforward so you always know
+            what happens next.
+          </p>
+        </div>
+
+        <!-- Workflow Cards -->
+        <div class="mt-12 grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <!-- Step 01 -->
+          <article
+            class="group rounded-2xl bg-white p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-ed-primary-600 hover:shadow-lg"
+          >
+            <div
+              class="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-ed-primary-50 text-ed-primary-600 transition-colors duration-300 group-hover:bg-white/15 group-hover:text-white"
+            >
+              <span class="material-symbols-rounded text-3xl"> chat </span>
+            </div>
+
+            <span
+              class="mt-5 block text-xs font-semibold uppercase tracking-widest text-ed-primary-600 transition-colors duration-300 group-hover:text-white/70"
+            >
+              Step 01
+            </span>
+
+            <h3
+              class="mt-2 text-xl font-semibold text-ed-neutral-950 transition-colors duration-300 group-hover:text-white"
+            >
+              Tell Us What You Need
+            </h3>
+
+            <p
+              class="mt-3 text-sm leading-relaxed text-ed-neutral-900 transition-colors duration-300 group-hover:text-white/75"
+            >
+              Share your goals, ideas, and what you need help with.
+            </p>
+          </article>
+
+          <!-- Step 02 -->
+          <article
+            class="group rounded-2xl bg-white p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-ed-primary-600 hover:shadow-lg"
+          >
+            <div
+              class="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-ed-primary-50 text-ed-primary-600 transition-colors duration-300 group-hover:bg-white/15 group-hover:text-white"
+            >
+              <span class="material-symbols-rounded text-3xl">
+                event_note
+              </span>
+            </div>
+
+            <span
+              class="mt-5 block text-xs font-semibold uppercase tracking-widest text-ed-primary-600 transition-colors duration-300 group-hover:text-white/70"
+            >
+              Step 02
+            </span>
+
+            <h3
+              class="mt-2 text-xl font-semibold text-ed-neutral-950 transition-colors duration-300 group-hover:text-white"
+            >
+              We Plan the Work
+            </h3>
+
+            <p
+              class="mt-3 text-sm leading-relaxed text-ed-neutral-900 transition-colors duration-300 group-hover:text-white/75"
+            >
+              We define the scope, direction, and steps needed for the project.
+            </p>
+          </article>
+
+          <!-- Step 03 -->
+          <article
+            class="group rounded-2xl bg-white p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-ed-primary-600 hover:shadow-lg"
+          >
+            <div
+              class="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-ed-primary-50 text-ed-primary-600 transition-colors duration-300 group-hover:bg-white/15 group-hover:text-white"
+            >
+              <span class="material-symbols-rounded text-3xl"> task_alt </span>
+            </div>
+
+            <span
+              class="mt-5 block text-xs font-semibold uppercase tracking-widest text-ed-primary-600 transition-colors duration-300 group-hover:text-white/70"
+            >
+              Step 03
+            </span>
+
+            <h3
+              class="mt-2 text-xl font-semibold text-ed-neutral-950 transition-colors duration-300 group-hover:text-white"
+            >
+              We Get It Done
+            </h3>
+
+            <p
+              class="mt-3 text-sm leading-relaxed text-ed-neutral-900 transition-colors duration-300 group-hover:text-white/75"
+            >
+              We work on the project while keeping communication clear and
+              focused.
+            </p>
+          </article>
+
+          <!-- Step 04 -->
+          <article
+            class="group rounded-2xl bg-white p-6 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:bg-ed-primary-600 hover:shadow-lg"
+          >
+            <div
+              class="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-ed-primary-50 text-ed-primary-600 transition-colors duration-300 group-hover:bg-white/15 group-hover:text-white"
+            >
+              <span class="material-symbols-rounded text-3xl"> verified </span>
+            </div>
+
+            <span
+              class="mt-5 block text-xs font-semibold uppercase tracking-widest text-ed-primary-600 transition-colors duration-300 group-hover:text-white/70"
+            >
+              Step 04
+            </span>
+
+            <h3
+              class="mt-2 text-xl font-semibold text-ed-neutral-950 transition-colors duration-300 group-hover:text-white"
+            >
+              Review & Deliver
+            </h3>
+
+            <p
+              class="mt-3 text-sm leading-relaxed text-ed-neutral-900 transition-colors duration-300 group-hover:text-white/75"
+            >
+              We review the result, make the necessary adjustments, and deliver
+              the final work.
+            </p>
+          </article>
+        </div>
+      </div>
+    </Container>
+  </section>
   <!-- End of About Section -->
   <Footer />
 </Layout>
