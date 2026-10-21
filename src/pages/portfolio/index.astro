@@ -2,6 +2,8 @@
 import Layout from "../../layouts/Layout.astro";
 import Navbar from "../../components/Navbar.astro";
 import Footer from "../../components/Footer.astro";
+import Container from "../../components/Container.astro";
+import FeaturedPortfolio from "../../components/FeaturedPortfolio.astro";
 ---
 
 <Layout
@@ -10,6 +12,30 @@ import Footer from "../../components/Footer.astro";
   canonical="https://ernadima.com/portfolio"
 >
   <Navbar />
-  <h1>Portfolio Page</h1>
+  <!-- Start of Featured Portfolio -->
+  <section class="bg-ed-primary-800">
+    <Container class="py-20">
+      <div class="mx-auto max-w-3xl text-center">
+        <span class="ed-caption font-medium text-ed-primary-300">
+          Featured Portfolio
+        </span>
+
+        <h2 class="ed-subheading mt-3 text-white">
+          Selected work that
+          <span class="text-ed-primary-300"> speaks for itself.</span>
+        </h2>
+
+        <p class="ed-body mt-4 text-white/70">
+          A selection of projects we've created to help businesses,
+          organizations, and individuals communicate their ideas through
+          thoughtful design and digital solutions.
+        </p>
+      </div>
+
+      <FeaturedPortfolio />
+    </Container>
+  </section>
+  <!-- End of Featured Portfolio -->
+
   <Footer />
 </Layout>
