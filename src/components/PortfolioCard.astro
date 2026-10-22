@@ -1,0 +1,101 @@
+---
+import LinkArrow from "./LinkArrow.astro";
+
+interface Props {
+  image: string;
+  category: string;
+  title: string;
+  description: string;
+  href: string;
+}
+
+const { image, category, title, description, href } = Astro.props;
+---
+
+<article class="group relative">
+  <!-- Image -->
+  <div
+    class="relative aspect-video overflow-hidden rounded-2xl bg-ed-primary-100"
+  >
+    <!-- Image Skeleton -->
+    <div
+      class="absolute inset-0 animate-pulse bg-ed-primary-100 transition-opacity duration-500"
+      data-skeleton
+      aria-hidden="true"
+    >
+    </div>
+
+    <!-- Cover Image -->
+    <img
+      src={image}
+      alt={title}
+      loading="lazy"
+      decoding="async"
+      class="relative z-0 h-full w-full object-cover opacity-0 transition-transform duration-700 ease-out group-hover:scale-105"
+      data-portfolio-image
+    />
+
+    <!-- Desktop Default Gradient -->
+    <div
+      class="absolute inset-x-0 bottom-0 z-10 hidden bg-linear-to-t from-ed-primary-950/95 via-ed-primary-950/50 to-transparent px-6 pb-6 pt-24 transition-opacity duration-500 lg:block lg:group-hover:opacity-0"
+    >
+      <span
+        class="ed-caption font-semibold uppercase tracking-widest text-ed-primary-300"
+      >
+        {category}
+      </span>
+
+      <h3
+        class="mt-2 text-xl font-semibold leading-tight text-white lg:text-2xl"
+      >
+        {title}
+      </h3>
+    </div>
+
+    <!-- Desktop Hover Overlay -->
+    <div
+      class="absolute inset-0 z-18 hidden flex-col justify-end rounded-2xl bg-ed-primary-950 px-6 py-6 text-white transition-transform duration-500 ease-out lg:flex lg:translate-y-full lg:group-hover:translate-y-0"
+    >
+      <span
+        class="ed-caption font-semibold uppercase tracking-widest text-ed-primary-300"
+      >
+        {category}
+      </span>
+
+      <h3 class="mt-2 text-xl font-semibold leading-tight lg:text-2xl">
+        {title}
+      </h3>
+
+      <p class="ed-body mt-3 line-clamp-2 text-white/70">
+        {description}
+      </p>
+
+      <div class="mt-4">
+        <LinkArrow href={href} variant="primary"> View Project </LinkArrow>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Information -->
+  <div class="mt-3 rounded-2xl bg-ed-primary-100 px-5 py-5 lg:hidden">
+    <span
+      class="ed-caption font-semibold uppercase tracking-widest text-ed-primary-600"
+    >
+      {category}
+    </span>
+
+    <h3 class="mt-2 text-xl font-semibold leading-tight text-ed-primary-950">
+      {title}
+    </h3>
+
+    <p class="ed-body mt-3 text-ed-neutral-900">
+      {description}
+    </p>
+
+    <div class="mt-4">
+      <LinkArrow href={href} variant="secondary"> View Project </LinkArrow>
+    </div>
+  </div>
+</article>
+
+<script src="../scripts/portfolio-images.ts"></script>

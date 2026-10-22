@@ -1,0 +1,120 @@
+---
+import Card from "./Card.astro";
+
+const testimonials = [
+  {
+    name: "Sarah Johnson",
+    role: "Business Owner",
+    image: "https://i.pravatar.cc/150?img=47",
+    testimonial:
+      "ErnaDima Studio helped me organize my digital content and made the whole process much easier.",
+  },
+  {
+    name: "Michael Anderson",
+    role: "Entrepreneur",
+    image: "https://i.pravatar.cc/150?img=12",
+    testimonial:
+      "The communication was clear, the work was delivered on time, and the final result exceeded my expectations.",
+  },
+  {
+    name: "Jessica Williams",
+    role: "Content Creator",
+    image: "https://i.pravatar.cc/150?img=32",
+    testimonial:
+      "They understood what I needed from the beginning and turned my ideas into clean, professional designs.",
+  },
+  {
+    name: "Daniel Miller",
+    role: "Small Business Owner",
+    image: "https://i.pravatar.cc/150?img=11",
+    testimonial:
+      "Reliable, responsive, and easy to work with. ErnaDima Studio has become a valuable part of my workflow.",
+  },
+  {
+    name: "Emily Carter",
+    role: "Marketing Manager",
+    image: "https://i.pravatar.cc/150?img=25",
+    testimonial:
+      "The team was professional, responsive, and delivered exactly what we needed for our project.",
+  },
+  {
+    name: "David Wilson",
+    role: "Startup Founder",
+    image: "https://i.pravatar.cc/150?img=13",
+    testimonial:
+      "Working with ErnaDima Studio saved us valuable time and helped us keep our digital work organized.",
+  },
+];
+---
+
+<div class="testimonial-marquee">
+  <div class="testimonial-track">
+    {
+      [...testimonials, ...testimonials].map((testimonial, index) => (
+        <Card
+          data-testimonial-card
+          data-index={index}
+          class="testimonial-card group w-70 shrink-0 rounded-2xl bg-white p-5 shadow-sm transition-all duration-700 hover:-translate-y-1 hover:bg-ed-primary-600 hover:shadow-xl hover:shadow-ed-primary-500/20 sm:w-[320px] md:w-85"
+        >
+          <div class="flex items-center gap-4">
+            <img
+              src={testimonial.image}
+              alt={testimonial.name}
+              loading="lazy"
+              decoding="async"
+              class="h-12 w-12 shrink-0 rounded-full object-cover"
+            />
+
+            <div class="min-w-0">
+              <h3 class="font-semibold text-ed-primary-950 transition-colors duration-900 group-hover:text-white">
+                {testimonial.name}
+              </h3>
+
+              <p class="ed-caption mt-0.5 transition-colors duration-900 group-hover:text-white/70">
+                {testimonial.role}
+              </p>
+            </div>
+          </div>
+
+          <p class="testimonial-text mt-6 text-sm leading-relaxed text-ed-neutral-900 transition-colors duration-900 group-hover:text-white md:text-base">
+            "{testimonial.testimonial}"
+          </p>
+        </Card>
+      ))
+    }
+  </div>
+</div>
+
+<script src="../scripts/testimonials-marquee.ts"></script>
+
+<style>
+  .testimonial-marquee {
+    width: 100%;
+    overflow-x: clip;
+    overflow-y: visible;
+    padding-block: 0.5rem;
+  }
+
+  .testimonial-track {
+    display: flex;
+    width: max-content;
+    gap: 1.5rem;
+    animation: testimonial-scroll 35s linear infinite;
+  }
+
+  @keyframes testimonial-scroll {
+    from {
+      transform: translateX(0);
+    }
+
+    to {
+      transform: translateX(calc(-50% - 0.75rem));
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .testimonial-track {
+      animation: none;
+    }
+  }
+</style>
