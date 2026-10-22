@@ -1,46 +1,22 @@
 ---
+import { getCollection } from "astro:content";
 import PortfolioCard from "./PortfolioCard.astro";
 
-const featuredProjects = [
-  {
-    category: "Web Design",
-    title: "Biolue Medic",
-    description:
-      "A clean and professional digital experience designed for a modern healthcare brand.",
-    image:
-      "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?auto=format&fit=crop&w=1200&q=80",
-    href: "/portfolio/biolue-medic",
-  },
-  {
-    category: "Branding",
-    title: "Instagram Branding",
-    description:
-      "A modern visual identity system designed to create a consistent and memorable brand presence.",
-    image:
-      "https://images.unsplash.com/photo-1611262588024-d12430b98920?auto=format&fit=crop&w=1200&q=80",
-    href: "/portfolio/instagram-branding",
-  },
-  {
-    category: "Social Media",
-    title: "Social Media Campaign",
-    description:
-      "A cohesive social media visual system created to communicate ideas clearly across digital platforms.",
-    image:
-      "https://images.unsplash.com/photo-1611926653458-09294b3142bf?auto=format&fit=crop&w=1200&q=80",
-    href: "/portfolio/social-media-campaign",
-  },
-  {
-    category: "Web Development",
-    title: "Business Website",
-    description:
-      "A modern business website designed to present services clearly and create a strong digital presence.",
-    image:
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1200&q=80",
-    href: "/portfolio/business-website",
-  },
-];
+const allProjects = await getCollection("portfolio");
+const featuredProjects = allProjects
+  .filter((project) => project.data.featured)
+  .sort((a, b) => (b.data.date?.getTime() ?? 0) - (a.data.date?.getTime() ?? 0))
+  .slice(0, 4);
 ---
 
 <div class="mt-12 grid grid-cols-1 gap-8 lg:grid-cols-2">
-  {featuredProjects.map((project) => <PortfolioCard {...project} />)}
+  {featuredProjects.map((project) => (
+    <PortfolioCard
+      category={project.data.category}
+      title={project.data.title}
+      description={project.data.shortDescription}
+      image={project.data.coverImage}
+      href={`/portfolio/${project.id}`}
+    />
+  ))}
 </div>

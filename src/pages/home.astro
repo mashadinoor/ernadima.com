@@ -155,20 +155,54 @@ import Footer from "../components/Footer.astro";
 
       <div class="my-16 h-px w-full bg-gray-200"></div>
 
-      <!-- Client Logos -->
-      <div class="flex flex-wrap items-center justify-center gap-10 opacity-60">
-        {
-          Array.from({ length: 5 }).map(() => (
-            <div
-              role="status"
-              class="flex h-16 items-center justify-center rounded-lg bg-gray-200 animate-pulse"
-            >
-              <div class="h-24 w-48 rounded bg-gray-300" />
-              <span class="sr-only">Loading...</span>
-            </div>
-          ))
-        }
+      <!-- Client Logo Marquee: temporary text-based placeholder wordmarks -->
+      <div class="client-logo-marquee mt-2" aria-label="Example client logos">
+        <div class="client-logo-track" data-logo-track>
+          <div class="client-logo-group">
+            <div class="client-logo" data-client-logo><span class="client-logo-mark">A</span><span>ACME</span></div>
+            <div class="client-logo client-logo-serif" data-client-logo>LOREM<span class="client-logo-dot">.</span></div>
+            <div class="client-logo" data-client-logo><span class="client-logo-orbit">◉</span><span>NOVA STUDIO</span></div>
+            <div class="client-logo client-logo-bold" data-client-logo>PIXELCO</div>
+            <div class="client-logo" data-client-logo><span class="client-logo-star">✳</span><span>NORTHSTAR</span></div>
+            <div class="client-logo client-logo-serif" data-client-logo>ORBIT</div>
+          </div>
+          <div class="client-logo-group" aria-hidden="true">
+            <div class="client-logo" data-client-logo><span class="client-logo-mark">A</span><span>ACME</span></div>
+            <div class="client-logo client-logo-serif" data-client-logo>LOREM<span class="client-logo-dot">.</span></div>
+            <div class="client-logo" data-client-logo><span class="client-logo-orbit">◉</span><span>NOVA STUDIO</span></div>
+            <div class="client-logo client-logo-bold" data-client-logo>PIXELCO</div>
+            <div class="client-logo" data-client-logo><span class="client-logo-star">✳</span><span>NORTHSTAR</span></div>
+            <div class="client-logo client-logo-serif" data-client-logo>ORBIT</div>
+          </div>
+        </div>
       </div>
+      <p class="mt-4 text-center text-xs text-gray-500">
+        Placeholder wordmarks for layout preview. Replace these with approved client logos before publication.
+      </p>
+
+      <style>
+        .client-logo-marquee { overflow: hidden; width: 100%; position: relative; }
+        .client-logo-marquee::before, .client-logo-marquee::after { content: ""; position: absolute; top: 0; bottom: 0; width: clamp(24px, 7vw, 96px); z-index: 1; pointer-events: none; }
+        .client-logo-marquee::before { left: 0; background: linear-gradient(to right, #f1f7fe, transparent); }
+        .client-logo-marquee::after { right: 0; background: linear-gradient(to left, #f1f7fe, transparent); }
+        .client-logo-track { display: flex; width: max-content; animation: client-logo-scroll 30s linear infinite; }
+        .client-logo-marquee:hover .client-logo-track { animation-play-state: paused; }
+        .client-logo-group { display: flex; align-items: center; flex: 0 0 auto; gap: clamp(2rem, 5vw, 5rem); padding: 0 clamp(1rem, 2vw, 2rem); }
+        .client-logo { min-width: 150px; height: 76px; display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem; color: #64748b; font-size: 1.15rem; font-weight: 750; letter-spacing: 0.06em; white-space: nowrap; opacity: 0.9; }
+        .client-logo-serif { font-family: Georgia, serif; font-weight: 700; font-size: 1.4rem; letter-spacing: 0.12em; }
+        .client-logo-bold { font-weight: 900; letter-spacing: -0.04em; font-size: 1.45rem; }
+        .client-logo-mark { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 8px; background: #64748b; color: white; font-size: 1rem; }
+        .client-logo-orbit { font-size: 1.7rem; }
+        .client-logo-star { font-size: 1.8rem; }
+        .client-logo-dot { color: #188dd3; }
+        .client-logo[data-client-logo] { position: relative; }
+        .client-logo-skeleton { color: transparent !important; border-radius: 8px; background: linear-gradient(90deg, #e2e8f0 25%, #f8fafc 50%, #e2e8f0 75%); background-size: 200% 100%; animation: client-logo-shimmer 1.2s ease-in-out infinite; }
+        .client-logo-skeleton > * { visibility: hidden; }
+        @keyframes client-logo-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+        @keyframes client-logo-shimmer { to { background-position: -200% 0; } }
+        @media (prefers-reduced-motion: reduce) { .client-logo-track { animation: none; } .client-logo-skeleton { animation: none; } }
+      </style>
+      <script src="../scripts/client-logos.ts"></script>
     </Container>
   </section>
   <!-- ENd of Social Proof -->
